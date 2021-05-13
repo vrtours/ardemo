@@ -49,29 +49,13 @@
       ios-src="assets/2PanelBI_ANIM.usdz"
       ar
       auto-rotate
+      autoplay
       camera-controls
       shadow-intensity="1"
       alt="AR"
       background-color="#70BCD1"
       environment-image="neutral"
     >
-      <label for="playpause">Animated: </label>
-      <input id="playpause" type="checkbox" checked="true" />
     </model-viewer>
-
-    <script>
-      (() => {
-        const modelViewer = document.querySelector("#PanelBIP");
-        const checkbox = document.querySelector("#playpause");
-
-        checkbox.addEventListener("changed", () => {
-          if (modelViewer.paused) {
-            modelViewer.play();
-          } else {
-            modelViewer.pause();
-          }
-        });
-      })();
-    </script>
   </body>
 </html>
