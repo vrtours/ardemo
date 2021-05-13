@@ -39,7 +39,7 @@
 
 </head>
 <body>
-  <model-viewer id="2PanelBIP"
+  <model-viewer id="PanelBIP"
   src="assets/2PanelBI_ANIM.glb" 
                 ios-src="assets/2PanelBI_ANIM.usdz"
                 ar
@@ -49,23 +49,23 @@
                 shadow-intensity="1" 
                 alt="AR" background-color="#70BCD1"
                 environment-image = "neutral">
-               <input id="playbutton" type="button">
+               <button  id="playbutton">Hotspot</button>
                   
   </model-viewer>
 
   <script>
-    (() => {
-      const modelViewer = document.querySelector('#2PanelBIP');
-      const checkbox = document.querySelector('#playbutton');
+    // (() => {
+    //   const modelViewer = document.querySelector('#2PanelBIP');
+    //   const checkbox = document.querySelector('#playbutton');
       
-      checkbox.addEventListener('click',() => {
-        if (modelViewer.paused) {
-    modelViewer.play();
+      playbutton.addEventListener('click',() => {
+        if (PanelBIP.paused) {
+        PanelBIP.play();
   } else {
-    modelViewer.pause();
-  }
-      });
-    })();
+    PanelBIP.pause();
+  }}
+    //   });
+    // })();
     </script>
 </body>
 </html>
