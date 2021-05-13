@@ -49,18 +49,21 @@
                 shadow-intensity="1" 
                 alt="AR" background-color="#70BCD1"
                 environment-image = "neutral">
-                <label for="neutral">Animation: </label>
-                <input id="neutral" type="checkbox" checked="true">
+               <input id="playbutton" type="button">
                   
   </model-viewer>
 
   <script>
     (() => {
       const modelViewer = document.querySelector('#2PanelBIP');
-      const checkbox = document.querySelector('#neutral');
+      const checkbox = document.querySelector('#playbutton');
       
-      checkbox.addEventListener('change',() => {
-        modelViewer.autoplay = checkbox.checked ? true : false;
+      checkbox.addEventListener('click',() => {
+        if (modelViewer.paused) {
+    modelViewer.play();
+  } else {
+    modelViewer.pause();
+  }
       });
     })();
     </script>
