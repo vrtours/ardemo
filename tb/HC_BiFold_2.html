@@ -46,7 +46,7 @@
     <model-viewer
       id="PanelBIP"
       src="../assets/tb/HC_BiFold.glb"
-      ios-src="../assets/tb/HC_BiFold.usdz#callToAction=More%20Info&checkoutTitle=Shutter%20Guard%20Bi%20Fold"
+      ios-src="../assets/tb/HC_BiFold.usdz"
       ar
       auto-rotate
       autoplay
@@ -56,14 +56,27 @@
       background-color="#70BCD1"
       environment-image="neutral"
     >
+      <button
+        slot="ar-button"
+        style="
+          background-color: white;
+          border-radius: 4px;
+          border: none;
+          position: absolute;
+          bottom: 16px;
+          right: 16px;
+        "
+      >
+        Activate AR
+      </button>
     </model-viewer>
-    <script>
+    <!-- <script>
       document
         .querySelector("#model-viewer")
         .addEventListener("quick-look-button-tapped", (event) => {
           if (event.data === "_apple_ar_quicklook_button_tapped") {
           }
         });
-    </script>
+    </script> -->
   </body>
 </html>
